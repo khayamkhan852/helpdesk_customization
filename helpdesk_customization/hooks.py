@@ -27,8 +27,8 @@ fixtures = [
             [
                 "name", "in", [
                     "Sales Invoice-custom_contract",
+				    "Sales Invoice-custom_period_start",
                     "Sales Invoice-custom_period_end",
-				    "Sales Invoice-custom_contract",
                     "Sales Order-custom_contract",
                     "Sales Order-custom_period_start",
                     "Sales Order-custom_period_end",
