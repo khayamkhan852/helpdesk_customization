@@ -40,6 +40,16 @@ fixtures = [
                     "Quotation-custom_scope_of_work_arabic",
                     "Quotation-custom_scope_of_work_english",
                     "Quotation-custom_scope_of_work",
+                    "Contract-custom_transaction_date",
+                    "Contract-custom_company",
+                    "Contract-custom_company_name_in_arabic",
+                    "Contract-custom_general_termsofservice",
+                    "Company-custom_company_arabic",
+                    "Contract-custom_performance_place",
+                    "Contract-custom_proformance_method",
+                    "Contract Template-custom_general_termsofservice",
+                    "Contract Template-custom_section_break_c88xd",
+                    "Contract Template-custom_bank_details",
                 ]
             ]
         ]
@@ -55,6 +65,9 @@ fixtures = [
                     "WhatsApp Notification-main-field_order",
                     "WhatsApp Notification-date_changed-depends_on",
                     "Quotation-main-field_order",
+                    "Contract-main-field_order",
+                    "Contract-contract_terms-label",
+                    "Contract Template-contract_terms-label",
                 ]
             ]
         ]
