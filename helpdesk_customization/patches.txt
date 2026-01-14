@@ -6,3 +6,6 @@
 # Patches added in this section will be executed after doctypes are migrated
 helpdesk_customization.patches.sales_invoice_patch
 helpdesk_customization.patches.sales_order_patch
+helpdesk_customization.patches.to_do_patch
+helpdesk_customization.patches.hd_ticket_patch
+helpdesk_customization.patches.crm_lead_patch

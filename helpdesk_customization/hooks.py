@@ -32,6 +32,10 @@ fixtures = [
                     "Sales Order-custom_contract",
                     "Sales Order-custom_period_start",
                     "Sales Order-custom_period_end",
+                    "ToDo-custom_allocated_to_name",
+                    "ToDo-custom_mobile_no",
+                    "HD Ticket-custom_resolved_by",
+                    "CRM Lead-custom_message",
                 ]
             ]
         ]
@@ -43,6 +47,9 @@ fixtures = [
                 "name", "in", [
                     "Sales Invoice-main-field_order",
                     "Sales Invoice-dimension_col_break-hidden",
+                    "WhatsApp Notification-doctype_event-options",
+                    "WhatsApp Notification-main-field_order",
+                    "WhatsApp Notification-date_changed-depends_on",
                 ]
             ]
         ]
@@ -157,42 +164,33 @@ fixtures = [
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+    "WhatsApp Notification": "helpdesk_customization.overrides.whatsapp_notification.CustomWhatsAppNotification"
+}
 
 # Document Events
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+    "ToDo": {
+        "validate": "helpdesk_customization.custom_python_scripts.todo.validate"
+    },
+    "HD Ticket": {
+        "before_save": "helpdesk_customization.custom_python_scripts.hd_ticket.before_save"
+    } 
+}
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"helpdesk_customization.tasks.all"
-# 	],
-# 	"daily": [
-# 		"helpdesk_customization.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"helpdesk_customization.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"helpdesk_customization.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"helpdesk_customization.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"cron": {
+		"* * * * *": [
+            "helpdesk_customization.custom_python_scripts.whatsapp_notification.trigger_notifications_every_minute"
+		]
+	}
+}
 
 # Testing
 # -------

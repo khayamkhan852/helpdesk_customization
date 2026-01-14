@@ -30,5 +30,53 @@
   "property_type": "Check",
   "row_name": null,
   "value": "1"
+ },
+ {
+  "default_value": null,
+  "doc_type": "WhatsApp Notification",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "doctype_event",
+  "is_system_generated": 0,
+  "modified": "2026-01-14 14:00:32.030876",
+  "module": "Helpdesk Customization",
+  "name": "WhatsApp Notification-doctype_event-options",
+  "property": "options",
+  "property_type": "Text",
+  "row_name": null,
+  "value": "Before Insert\nBefore Validate\nBefore Save\nAfter Insert\nAfter Save\nBefore Submit\nAfter Submit\nBefore Cancel\nAfter Cancel\nBefore Delete\nAfter Delete\nBefore Save (Submitted Document)\nAfter Save (Submitted Document)\nDays After\nDays Before\nMinutes Before"
+ },
+ {
+  "default_value": null,
+  "doc_type": "WhatsApp Notification",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocType",
+  "field_name": null,
+  "is_system_generated": 0,
+  "modified": "2026-01-14 14:05:47.157914",
+  "module": "Helpdesk Customization",
+  "name": "WhatsApp Notification-main-field_order",
+  "property": "field_order",
+  "property_type": "Data",
+  "row_name": null,
+  "value": "[\"notification_name\", \"notification_type\", \"reference_doctype\", \"field_name\", \"event_frequency\", \"doctype_event\", \"days_in_advance\", \"custom_minutes\", \"date_changed\", \"column_break_3\", \"disabled\", \"template\", \"code\", \"attach_document_print\", \"custom_attachment\", \"attach\", \"attach_from_field\", \"file_name\", \"section_break_11\", \"condition\", \"column_break_12\", \"fields\", \"button_fields\", \"property_section\", \"set_property_after_alert\", \"property_value\", \"help_section\", \"help_html\", \"header_type\"]"
+ },
+ {
+  "default_value": null,
+  "doc_type": "WhatsApp Notification",
+  "docstatus": 0,
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "field_name": "date_changed",
+  "is_system_generated": 0,
+  "modified": "2026-01-14 14:05:30.577788",
+  "module": "Helpdesk Customization",
+  "name": "WhatsApp Notification-date_changed-depends_on",
+  "property": "depends_on",
+  "property_type": "Data",
+  "row_name": null,
+  "value": "eval:doc.doctype_event==='Days Before' || doc.doctype_event==='Days After' || doc.doctype_event == \"Minutes Before\""
  }
 ]
