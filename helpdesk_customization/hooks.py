@@ -37,6 +37,9 @@ fixtures = [
                     "HD Ticket-custom_resolved_by",
                     "CRM Lead-custom_message",
                     "WhatsApp Notification-custom_minutes",
+                    "Quotation-custom_scope_of_work_arabic",
+                    "Quotation-custom_scope_of_work_english",
+                    "Quotation-custom_scope_of_work",
                 ]
             ]
         ]
@@ -51,6 +54,7 @@ fixtures = [
                     "WhatsApp Notification-doctype_event-options",
                     "WhatsApp Notification-main-field_order",
                     "WhatsApp Notification-date_changed-depends_on",
+                    "Quotation-main-field_order",
                 ]
             ]
         ]

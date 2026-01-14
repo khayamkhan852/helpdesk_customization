@@ -9,3 +9,4 @@ helpdesk_customization.patches.sales_order_patch
 helpdesk_customization.patches.to_do_patch
 helpdesk_customization.patches.hd_ticket_patch
 helpdesk_customization.patches.crm_lead_patch
+helpdesk_customization.patches.quotation_patch
