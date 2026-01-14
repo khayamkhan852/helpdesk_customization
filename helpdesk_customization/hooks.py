@@ -36,6 +36,7 @@ fixtures = [
                     "ToDo-custom_mobile_no",
                     "HD Ticket-custom_resolved_by",
                     "CRM Lead-custom_message",
+                    "WhatsApp Notification-custom_minutes",
                 ]
             ]
         ]
