@@ -209,7 +209,10 @@ doc_events = {
     },
     "HD Ticket": {
         "before_save": "helpdesk_customization.custom_python_scripts.hd_ticket.before_save"
-    } 
+    },
+    "WhatsApp Message": {
+        "after_insert": "helpdesk_customization.custom_python_scripts.whatsapp_message.after_insert"
+    }
 }
 
 # Scheduled Tasks
