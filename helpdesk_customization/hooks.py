@@ -54,7 +54,11 @@ fixtures = [
                     "Contract-custom_section_break_d0urz",
                     "Contract Fulfilment Checklist-custom_content_and_method",
                     "Contract Template Fulfilment Terms-custom_content_and_method",
-                    "Contract Template Fulfilment Terms-custom_acceptance_criteria"
+                    "Contract Template Fulfilment Terms-custom_acceptance_criteria",
+                    "HD Customer-custom_mobile_no",
+                    "HD Customer-custom_contact",
+                    "HD Ticket-custom_customer_contact",
+                    "HD Ticket-custom_mobile_no"
                 ]
             ]
         ]
@@ -77,8 +81,8 @@ fixtures = [
                     "Contract Fulfilment Checklist-main-field_order",
                     "Contract Fulfilment Checklist-requirement-label",
                     "Contract Template Fulfilment Terms-requirement-label",
-                    "Contract Template Fulfilment Terms-main-field_order"
-
+                    "Contract Template Fulfilment Terms-main-field_order",
+                    "Contact Phone-is_primary_mobile_no-default",
                 ]
             ]
         ]
@@ -212,6 +216,9 @@ doc_events = {
     },
     "WhatsApp Message": {
         "after_insert": "helpdesk_customization.custom_python_scripts.whatsapp_message.after_insert"
+    },
+    "Contact": {
+        "after_insert": "helpdesk_customization.custom_python_scripts.contact.after_insert"
     }
 }
 
