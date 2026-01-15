@@ -50,6 +50,11 @@ fixtures = [
                     "Contract Template-custom_general_termsofservice",
                     "Contract Template-custom_section_break_c88xd",
                     "Contract Template-custom_bank_details",
+                    "Contract-custom_bank_details",
+                    "Contract-custom_section_break_d0urz",
+                    "Contract Fulfilment Checklist-custom_content_and_method",
+                    "Contract Template Fulfilment Terms-custom_content_and_method",
+                    "Contract Template Fulfilment Terms-custom_acceptance_criteria"
                 ]
             ]
         ]
@@ -68,6 +73,12 @@ fixtures = [
                     "Contract-main-field_order",
                     "Contract-contract_terms-label",
                     "Contract Template-contract_terms-label",
+                    "Contract Fulfilment Checklist-notes-label",
+                    "Contract Fulfilment Checklist-main-field_order",
+                    "Contract Fulfilment Checklist-requirement-label",
+                    "Contract Template Fulfilment Terms-requirement-label",
+                    "Contract Template Fulfilment Terms-main-field_order"
+
                 ]
             ]
         ]
@@ -96,7 +107,9 @@ fixtures = [
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Contract" : "public/js/contract.js"
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -218,9 +231,9 @@ scheduler_events = {
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "helpdesk_customization.event.get_events"
-# }
+override_whitelisted_methods = {
+	"erpnext.crm.doctype.contract_template.contract_template.get_contract_template": "helpdesk_customization.overrides.whitelisted_methods.get_contract_template"
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
